@@ -36,7 +36,12 @@
 				compress: {
 					warnings: false
 				}
-			})
+			}),
+			new webpack.BannerPlugin('版权所有，翻版必究'),
+			new HtmlWebpackPlugin({
+				template: __dirname + '/app/index.tmpl.html'
+			}),
+			new webpack.HotModuleReplacementPlugin()
 		],
 	    //配置webpack开发服务功能
 	    devServer:{
